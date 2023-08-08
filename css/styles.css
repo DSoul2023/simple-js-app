@@ -1,0 +1,21 @@
+/* Following code adds color to the name of a pokemon based on their type (i.e blue=water, red=fire, green=grass,ect...), and emphasizes name using bold and stylized font.*/
+.grass-name {
+    color: green;
+    font-weight: bold;
+    font-style: italic;
+}
+.fire-name {
+    color: red;
+    font-weight: bold;
+    font-style: italic;
+}
+.water-name {
+    color: blue;
+    font-weight: bold;
+    font-style: italic;
+}
+/*Following code emphasizes exclaimations!*/
+.exclaim {
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
