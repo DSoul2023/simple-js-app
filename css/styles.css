@@ -1,94 +1,102 @@
-/*Following code emphasizes exclaimations!*/
+/*Following code emphasizes exclaimations!
 body {
-    background-color: springgreen;
+  background-color: springgreen;
+}*/
+h1, h5{
+  color:blue;
+  font-family: fantasy;
+  text-align: center;
+  text-decoration: underline;
+  padding-bottom: 3%;
 }
-h1 {
-    color:blue;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
-    text-decoration: underline;
-    padding-bottom: 3%;
+
+p {
+  color:green;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .pokemon-list {
-    box-sizing: 30%;
-    display: grid;
-    justify-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px;
-    border: 15px solid black;
-    border-style: ridge;
-
+  box-sizing: 30%;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  border: 15px solid black;
+  border-style: ridge;
 }
+
+/*
 .button-class {
-    background-color: skyblue;
-    font-weight: bold;
-    font-style: italic;
-    font-size: 18px;
-    cursor: pointer;
-    color: black;
-    border: 5px solid blue;
-    margin: 4px 2px;
-    text-align: center;
-    border-radius: 20%
+  background-color: skyblue;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 18px;
+  cursor: pointer;
+  color: black;
+  border: 5px solid blue;
+  margin: 4px 2px;
+  text-align: center;
+  border-radius: 20%
 }
 #modal-container {
-    position: fixed;
-    padding: 20px;
-    box-sizing: border-box;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    
-    /* to show it above other content */
-    z-index: 999; 
-    
-    /* to allow scrolling if the screen is not high enough*/
-    overflow: auto; 
-    
-    /* this is used to center the modal */
-    display: grid;
-    text-align: center;
-  }
+  position: fixed;
+  padding: 20px;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
   
-  .modal {
-    margin: auto;
-    display: inline-block;
-    box-sizing: border-box;
-    background: #fff;
-    padding: 15px;
-    width: 100%;
-    max-width: 700px;
-    text-align: center;
-  }
+  /* to show it above other content 
+  z-index: 999; 
   
-  .modal-close {
-    float: right;
-    border: 0;
-    background: none;
-    color: #777;
-    text-decoration: underline;
-  }
+  /* to allow scrolling if the screen is not high enough
+  overflow: auto; 
   
-  .modal h1 {
-    margin-top: 0;
-  }
-  
-  .modal p {
-    margin-bottom: 0;
-  }
-  
-  #modal-container {
-    display: none;
-  }
-  
-  #modal-container.is-visible {
-    /* CSS for modal container - add your own desired CSS styles here */
-    display: block;
-  }
-  .PokePic {
-    width: 50%;
-    height: 50%;
+  /* this is used to center the modal 
+  display: grid;
+  text-align: center;
+}
 
-  } 
+.modal {
+  margin: auto;
+  display: inline-block;
+  box-sizing: border-box;
+  background: #fff;
+  padding: 15px;
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+}
+
+.modal-close {
+  float: right;
+  border: 0;
+  background: none;
+  color: #777;
+  text-decoration: underline;
+}
+
+.modal h1 {
+  margin-top: 0;
+}
+
+.modal p {
+  margin-bottom: 0;
+}
+
+#modal-container {
+  display: none;
+}
+
+/*#modal-container.is-visible {
+CSS for modal container - add your own desired CSS styles here 
+  display: block;
+}*/
+.modal-img {
+  display:block;
+  width: 50%;
+  height: 50%;
+  margin-left: auto;
+  margin-right: auto;  
+}
