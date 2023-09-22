@@ -71,18 +71,23 @@ let pokemonRepository = (function() {
       modalTitle.empty();
       modalBody.empty();
   
-      // creating element for name in modal content
-      let nameElement = $('<h5 class="modal-title">' + pokemon.name + '</h5>');
-      let imageElement = $('<img class="modal-img">');
-        imageElement.attr('src', pokemon.imageUrl);
-      let heightElement = $('<p>' + 'height : ' + pokemon.height + ' decimeters' + '</p>');
-  
-  
-      modalTitle.append(nameElement);
-      modalBody.append(imageElement);
-      modalBody.append(heightElement);
-    
-    }
+        // creating element for name in modal content
+    let nameElement = $('<h5 class="modal-title">' + pokemon.name + '</h5>');
+    let imageElement = $('<img class="modal-img">');
+      imageElement.attr('src', pokemon.imageUrl);
+    let heightElement = $('<p>' + 'height : ' + pokemon.height + ' decimeters' + '</p>');
+    let weightElement = $('<p>' + 'weight : ' + pokemon.weight + ' decagrams' + '</p>');
+    let typesElement = $('<p>' + 'Types: ' + pokemon.types.join(', ') + '</p>');
+    let abilitiesElement = $('<p>' + 'Abilities: ' + pokemon.abilities.join(', ') + '</p>');
+
+
+    modalTitle.append(nameElement);
+    modalBody.append(imageElement);
+    modalBody.append(heightElement);
+    modalBody.append(weightElement);
+    modalBody.append(typesElement);
+    modalBody.append(abilitiesElement);
+  }
   
     function loadList() {
       return fetch(apiUrl).then(function(response) {
@@ -109,7 +114,13 @@ let pokemonRepository = (function() {
         //add the details to the item
         item.imageUrl = details.sprites.front_default;
         item.height = details.height;
-        item.types = details.types;
+        item.weight = details.weight;
+      item.types = details.types.map(function (type) {
+        return type.type.name;
+      });
+      item.abilities = details.abilities.map(function (ability) {
+        return ability.ability.name;
+      });
       }).catch(function(e) {
         console.error(e);
       });
